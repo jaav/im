@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_ImUser" object="${imuser}" path="/imusers" z="76snW6KDTEXroKv6TskUnlI3lsk=">
+        <field:display field="name" id="s_be_mobila_im_models_ImUser_name" object="${imuser}" z="tecEoVrkQ9RUf+u1Ao5PjehJm/Q="/>
+        <field:display field="firstname" id="s_be_mobila_im_models_ImUser_firstname" object="${imuser}" z="6Px3tke9Nvbz4zQj/LekEC4gaj4="/>
+        <field:display field="identifier" id="s_be_mobila_im_models_ImUser_identifier" object="${imuser}" z="vRD+6diwAGzth5ei9VoD5IB7uBA="/>
+    </page:show>
+</div>

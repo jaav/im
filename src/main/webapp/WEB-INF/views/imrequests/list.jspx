@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_ImRequest" items="${imrequests}" z="cw5iqo75VzV1LTqCSbqgzj6DdEo=">
+        <table:table data="${imrequests}" id="l_be_mobila_im_models_ImRequest" path="/imrequests" z="6AYlNuI/3qaOubtFEY2ge5Jdbbk=">
+            <table:column id="c_be_mobila_im_models_ImRequest_requestDate" property="requestDate" z="XA829OpK3wcBB0tGHrtq4irjiMk="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_person" property="person" z="QGkafToeYx3M00zZtbOhRo4STDQ="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_insurance" property="insurance" z="mRVgVr62VlbJjQCuKCgayw2KLCY="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_requestMode" property="requestMode" z="R2T6VwItYQ4JKdL6v72tJMxtBFY="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_imuser" property="imuser" z="jX7z/jm9K0jQkGGd5uRcw6l3Elo="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_uri" property="uri" z="kzZ3UNcFXbH4bVL5/7ruBZMIh+w="/>
+            <table:column id="c_be_mobila_im_models_ImRequest_log" property="log" />
+        </table:table>
+    </page:list>
+</div>

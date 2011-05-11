@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_ImRequest" object="${imrequest}" path="/imrequests" z="CgcwVVt+TH6BFHAE5FWZWumdoJ8=">
+        <field:display date="true" dateTimePattern="${imRequest_requestdate_date_format}" field="requestDate" id="s_be_mobila_im_models_ImRequest_requestDate" object="${imrequest}" z="hg8yke21+wP/AoVuClsfK1zeaSk="/>
+        <field:display field="person" id="s_be_mobila_im_models_ImRequest_person" object="${imrequest}" z="/U2FqhC8F422I4qqUGFy1Z1cBSE="/>
+        <field:display field="insurance" id="s_be_mobila_im_models_ImRequest_insurance" object="${imrequest}" z="AaSHIuLE4luEjyJ6jMlABWFKgAU="/>
+        <field:display field="requestMode" id="s_be_mobila_im_models_ImRequest_requestMode" object="${imrequest}" z="4Loev21SoDQZbPPyZffAHa1KMsU="/>
+        <field:display field="imuser" id="s_be_mobila_im_models_ImRequest_imuser" object="${imrequest}" z="1m5TuzFW2rorzMB3fuZYFgbdInY="/>
+        <field:display field="uri" id="s_be_mobila_im_models_ImRequest_uri" object="${imrequest}" z="9Q2XBNm0XxaHtDHhg5PZ5NhGnPQ="/>
+        <field:display field="log" id="s_be_mobila_im_models_ImRequest_log" object="${imrequest}" />
+    <field:display field="requestFor" id="s_be_mobila_im_models_ImRequest_requestFor" object="${imrequest}" z="qBesXAkoSt/Bm7feEN5RUS7FnOs="/>
+    </page:show>
+</div>

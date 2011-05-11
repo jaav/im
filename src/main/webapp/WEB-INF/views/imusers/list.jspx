@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_ImUser" items="${imusers}" z="g7dyRID5LhpS8KxR0Sp6a3SKiLs=">
+        <table:table data="${imusers}" id="l_be_mobila_im_models_ImUser" path="/imusers" z="pCfIQhquqspLdutrr0JsgnQtNGQ=">
+            <table:column id="c_be_mobila_im_models_ImUser_name" property="name" z="Mf+pknoVwEAYppMfIlDkPlBH+n8="/>
+            <table:column id="c_be_mobila_im_models_ImUser_firstname" property="firstname" z="H50mHFcMfJhtVtPRavwT14XOiTc="/>
+            <table:column id="c_be_mobila_im_models_ImUser_identifier" property="identifier" z="4cVb+qU+2sSbY9dCwAGo+lL5U5g="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByImportFile" id="ff_be_mobila_im_models_Insurance" path="/insurances" z="eD677zE6H4y5WrypAQdPuUYJteI=">
+        <field:input disableFormBinding="true" field="importFile" id="f_be_mobila_im_models_Insurance_importFile" z="ITgmj+yBXsYYWbNyENRcEau8tdY="/>
+    </form:find>
+</div>

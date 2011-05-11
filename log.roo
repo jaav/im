@@ -1,0 +1,155 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-24 16:04:53
+project --topLevelPackage be.mobila.im
+dependency add --groupId org.apache.poi --artifactId poi --version 3.7
+dependency add --groupId commons-lang --artifactId commons-lang --version 2.5
+dependency add --groupId commons-io --artifactId commons-io --version 2.0
+dependency add --groupId org.apache.poi --artifactId poi-ooxml --version 3.7
+dependency add --groupId com.itextpdf --artifactId itextpdf --version 5.0.4
+dependency add --groupId javax.mail --artifactId mail --version 1.4.1
+dependency add --groupId dom4j --artifactId dom4j --version 1.6.1
+dependency add --groupId jaxen --artifactId jaxen --version 1.1.1
+dependency add --groupId xerces --artifactId xercesImpl --version 2.9.1
+persistence setup --provider HIBERNATE --database MYSQL --userName root
+database properties set --key database.url --value jdbc:mysql://localhost/im_parallel
+logging setup --level DEBUG
+enum type --class ~.models.InsuranceType
+enum constant --name CAR_STD
+enum constant --name CAR_OMNI
+enum constant --name FIRE
+enum constant --name FAMILY
+enum constant --name PENSION_T1
+enum constant --name PENSION_T2
+enum constant --name LIFE
+entity --class ~.models.Insurance --testAutomatically
+field enum --fieldName InsuranceType --type ~.models.InsuranceType
+field string --fieldName importFile
+field string --fieldName converter
+field string --fieldName abstractDataSaver
+field string --fieldName pdfTemplate
+entity --class ~.models.Company --testAutomatically 
+field string --fieldName name
+entity --class ~.models.Calculation --testAutomatically 
+entity --class ~.models.Formula --testAutomatically 
+field string --fieldName definition
+enum type --class ~.models.LiaInsuranceSubType
+enum constant --name PCPGAC5POL
+enum constant --name PCPGAC7POL
+enum constant --name PCPGAC5NOPOL
+enum constant --name PCPGAC7NOPOL
+enum constant --name PCPNOGACPOL
+enum constant --name PCPNOGACNOPOL
+// [failed] entity --class ~.models.InsuranceValue --testAutomatically --abstract 
+// [failed] field number --type java.lang.Double --digitsInteger 10 --digitsFraction 10 --fieldName proposal
+// [failed] field reference --fieldName insurance --type ~.models.Insurance
+// [failed] entity --class ~.models.LiaValue --testAutomatically --extends ~.models.InsuranceValue
+// [failed] field number --type java.lang.Long --fieldName amount
+// [failed] field number --type java.lang.Double --fieldName rate
+// [failed] field enum --fieldName insuranceSubType --type ~.models.LiaInsuranceSubType
+entity --class ~.models.Person --testAutomatically
+field string --fieldName name
+field string --fieldName firstname
+field string --fieldName address
+field string --fieldName postalcode
+field string --fieldName city
+field string --fieldName country
+field string --fieldName nationality
+field string --fieldName gender
+field string --fieldName placeofbirth
+// [failed] field date --type java.util.Date --fieldName birthdate
+field string --fieldName phone1
+field string --fieldName phone2
+field string --fieldName mail
+field string --fieldName fax
+entity --class ~.models.ImUser --testAutomatically
+field string --fieldName name
+field string --fieldName firstname
+field string --fieldName identifier
+enum type --class ~.models.RequestMode
+enum constant --name BB_MAIL
+enum constant --name MAIL
+enum constant --name WEB
+enum constant --name DROPPING
+enum type --class ~.models.RequestFor
+enum constant --name PRICING
+enum constant --name PROPOSAL
+enum constant --name CONTRACT
+entity --class ~.models.ImRequest --testAutomatically
+field date --type java.util.Date --fieldName requestDate
+field reference --fieldName person --type ~.models.Person
+field reference --fieldName insurance --type ~.models.Insurance
+field enum --fieldName requestMode --type ~.models.RequestMode
+field reference --fieldName imuser --type ~.models.ImUser
+field string --fieldName uri
+enum type --class ~.models.ResponseMode
+enum constant --name BB_MAIL
+enum constant --name MAIL
+enum constant --name MAIL_WA
+enum constant --name FAX
+enum type --class ~.models.Status
+enum constant --name INITIATED
+enum constant --name IN_PROGRESS
+enum constant --name READY
+enum constant --name DONE_SUCCESS
+enum constant --name DONE_FAIL
+entity --class ~.models.Response --testAutomatically
+field date --type java.util.Date --fieldName responseDate 
+field enum --fieldName responseMode --type ~.models.ResponseMode
+field reference --fieldName imRequest --type ~.models.ImRequest
+field enum --fieldName status --type ~.models.Status
+field string --fieldName imresult
+field string --fieldName address
+finder add --finderName findImUsersByIdentifierEquals --class ~.models.ImUser
+finder add --finderName findInsurancesByInsuranceType --class ~.models.Insurance
+finder add --finderName findInsurancesByImportFile --class ~.models.Insurance
+finder add --finderName findPeopleByMailEquals --class ~.models.Person
+finder add --finderName findResponsesByStatus --class ~.models.Response
+controller all --package ~.web
+perform eclipse
+perform package
+entity --class ~.models.InsuranceValue --abstract 
+field number --type java.lang.Double --digitsInteger 10 --digitsFraction 10 --fieldName proposal
+field reference --fieldName insurance --type ~.models.Insurance
+entity --class ~.models.LiaValue --testAutomatically --extends ~.models.InsuranceValue
+field number --type java.lang.Long --fieldName amount
+field number --type java.lang.Double --fieldName rate
+field enum --fieldName insuranceSubType --type ~.models.LiaInsuranceSubType
+focus --class ~.models.ImRequest
+field enum --fieldName requestFor --type ~.models.RequestFor
+controller all --package ~.web
+focus --class ~.models.ImUser
+finder list
+finder add --finderName findImUsersByIdentifierEquals
+focus --class ~.models.Insurance
+finder list
+finder add --finderName findInsurancesByInsuranceType
+finder add --finderName findInsurancesByImportFile
+focus --class ~.models.LiaValue
+finder add findLiaValuesByRateBetween
+finder add findLiaValuesByRateIsNotNull
+finder add findLiaValuesByRateEquals
+focus --class ~.models.person
+field date --type java.util.Date --fieldName birthdate
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// [failed] perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-10 17:56:33
+focus --class ~.models.ImRequest
+field number --type java.lang.Long --fieldName valueId
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-11 10:44:11
+// [failed] controller all --package ~.web
+// [failed] controller scaffold --class ~.web.ImRequestController --entity ~.models.ImRequest
+controller scaffold --class ~.web.ImRequestController --entity ~.models.ImRequest
+controller all --package ~.web
+focus --class ~.models.Response
+field number --type java.lang.Long --fieldName valueId
+exit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-14 09:45:13

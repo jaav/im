@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_LiaValue" object="${liavalue}" path="/liavalues" z="c7vV8fN2Fm+O9BqK+c9UKtFx74g=">
+        <field:display field="proposal" id="s_be_mobila_im_models_LiaValue_proposal" object="${liavalue}" z="JeIU7++dZ4AuoW9T5pH4711MrAY="/>
+        <field:display field="insurance" id="s_be_mobila_im_models_LiaValue_insurance" object="${liavalue}" z="a4w9aSHRh2Kde0gapc1lJuOGxMI="/>
+        <field:display field="amount" id="s_be_mobila_im_models_LiaValue_amount" object="${liavalue}" z="nDnkmtHprGd2R7QWQc30rgaU4+g="/>
+        <field:display field="rate" id="s_be_mobila_im_models_LiaValue_rate" object="${liavalue}" z="Sq4jwZ4j/+7JcaMig88cKZnmFdk="/>
+        <field:display field="insuranceSubType" id="s_be_mobila_im_models_LiaValue_insuranceSubType" object="${liavalue}" z="S0Ml/GSVC4IK3M+GVeu2mSA8E9s="/>
+    </page:show>
+</div>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+	<jsp:output omit-xml-declaration="yes"/>
+
+<menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+    <menu:category id="c_imrequest" z="9qpIpgN9lderdlaTQH/rDy84xhk=">
+            <menu:item id="i_imrequest_new" messageCode="global_menu_new" url="/imrequests?form" z="bhwdFRfVBrqgFkWU7N3jGsI96zU="/>
+        <menu:item id="i_imrequest_list" messageCode="global_menu_list" url="/imrequests?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="qOoJ4STFS4MbVOjfWteOWDBnzU0="/>
+        </menu:category>
+    <menu:category id="c_response" z="/EtV5iwRtvniQ1cANvb3cis+7fo=">
+            <menu:item id="i_response_new" messageCode="global_menu_new" url="/responses?form" z="1imwXpR33jTyqphLwLHDEP32iIo="/>
+        <menu:item id="i_response_list" messageCode="global_menu_list" url="/responses?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="7yLlDPuvb+vGhMuQXgZM+IpxOHA="/>
+        <menu:item id="fi_response_status" messageCode="global_menu_find" url="/responses?find=ByStatus&amp;form" z="Wga1dgCBV1D4/s5j2OLMCFmrWBg="/>
+        </menu:category>
+    <menu:category id="c_person" z="Cz66KzcF6GdyygpbYfiE+EkFFFA=">
+            <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
+        <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="JtA++hSeGIGfpQ4LCxTKVqFrw4c="/>
+        <menu:item id="fi_person_mailequals" messageCode="global_menu_find" url="/people?find=ByMailEquals&amp;form" z="7KpXkZJXX3P6PHLLuKxFuydVlVM="/>
+        </menu:category>
+    <menu:category id="c_insurance" z="fngfKB1jYco0JPr1YJ6AY8mvDMQ=">
+            <menu:item id="i_insurance_new" messageCode="global_menu_new" url="/insurances?form" z="StC0Ou2o7H2YD13Q8SQYj7qmeYc="/>
+        <menu:item id="i_insurance_list" messageCode="global_menu_list" url="/insurances?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="zvVBs0+lKW/vADBtjBupASgIx2o="/>
+        <menu:item id="fi_insurance_insurancetype" messageCode="global_menu_find" url="/insurances?find=ByInsuranceType&amp;form" z="6d0WN5TyyrY6aRMvgKrws6reobM="/>
+        <menu:item id="fi_insurance_importfile" messageCode="global_menu_find" url="/insurances?find=ByImportFile&amp;form" z="R14GdFgyQMxeg0+CaWIrrW2GTEg="/>
+        </menu:category>
+    <menu:category id="c_liavalue" z="pw4zPkVwEuH3denaMoKICQHRCDQ=">
+            <menu:item id="i_liavalue_new" messageCode="global_menu_new" url="/liavalues?form" z="ya25jaoHDbT2v+Drzl7KUdaw5Aw="/>
+        <menu:item id="i_liavalue_list" messageCode="global_menu_list" url="/liavalues?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="khX/K1zmXcdyGlTup4yW6xRpgcM="/>
+        <menu:item id="fi_liavalue_ratebetween" messageCode="global_menu_find" url="/liavalues?find=ByRateBetween&amp;form" z="1MMhlP1CX9AYzBybDxhP0oSao64="/>
+        <menu:item id="fi_liavalue_rateisnotnull" messageCode="global_menu_find" url="/liavalues?find=ByRateIsNotNull&amp;form" z="mcArdFJDiOzoALbH/uKtRvKCr2s="/>
+        <menu:item id="fi_liavalue_rateequals" messageCode="global_menu_find" url="/liavalues?find=ByRateEquals&amp;form" z="Cze3S1OTD2xzRsXTSD5qdLAFXd0="/>
+        </menu:category>
+    <menu:category id="c_imuser" z="aiIqwKJLtM+O9k9kG7mycUXidWQ=">
+            <menu:item id="i_imuser_new" messageCode="global_menu_new" url="/imusers?form" z="1OU63X61mK3/GI5qeiWWkA1IREw="/>
+        <menu:item id="i_imuser_list" messageCode="global_menu_list" url="/imusers?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="g5XgX5PTuhLDDXAcUqmwL0J4K7E="/>
+        <menu:item id="fi_imuser_identifierequals" messageCode="global_menu_find" url="/imusers?find=ByIdentifierEquals&amp;form" z="FwBdQFzAFVlgDJCy2aCJG83axF4="/>
+        </menu:category>
+    </menu:menu>
+</div>

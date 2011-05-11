@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_Person" object="${person}" path="/people" z="wW67Zi4ARdj1IW8qqeApm4ThNmY=">
+        <field:display field="name" id="s_be_mobila_im_models_Person_name" object="${person}" z="N3gH+H2rgWvVDRAI6vo/vNVAGRg="/>
+        <field:display field="firstname" id="s_be_mobila_im_models_Person_firstname" object="${person}" z="Edx5hwajpq1RzMbzCIai3jEbsqk="/>
+        <field:display field="address" id="s_be_mobila_im_models_Person_address" object="${person}" z="SYrHc+FLnaCH+JHoX5QiIf/OOJU="/>
+        <field:display field="postalcode" id="s_be_mobila_im_models_Person_postalcode" object="${person}" z="F1Ct0uoRAb1s0paGNpDrkYU8Jw0="/>
+        <field:display field="city" id="s_be_mobila_im_models_Person_city" object="${person}" z="EYpE+G3LsNVfdX3chr7KbqEKph8="/>
+        <field:display field="country" id="s_be_mobila_im_models_Person_country" object="${person}" z="IerL5iLT1Eo2h24m9WYBlT4Ru/Q="/>
+        <field:display field="nationality" id="s_be_mobila_im_models_Person_nationality" object="${person}" z="0spdr5H5xq2ZA/TzJFVoucWzEyc="/>
+        <field:display field="gender" id="s_be_mobila_im_models_Person_gender" object="${person}" z="d8tTIaWuyK97am0ib4bWJgjl2g4="/>
+        <field:display field="placeofbirth" id="s_be_mobila_im_models_Person_placeofbirth" object="${person}" z="RNCljRCcKKlGBNiWStZePYDePtc="/>
+        <field:display field="phone1" id="s_be_mobila_im_models_Person_phone1" object="${person}" z="j9RowC3RxkQ9m31griTjpWqk6/A="/>
+        <field:display field="phone2" id="s_be_mobila_im_models_Person_phone2" object="${person}" z="/5Y+jhkCyJh1JekaewJjUGqiOBE="/>
+        <field:display field="mail" id="s_be_mobila_im_models_Person_mail" object="${person}" z="JsPtcxpBKtYDp9eIMEu515/K3Pc="/>
+        <field:display field="fax" id="s_be_mobila_im_models_Person_fax" object="${person}" z="R7wVvOAvJfyA2m1qD2KnyvF/cyc="/>
+    <field:display date="true" dateTimePattern="${person_birthdate_date_format}" field="birthdate" id="s_be_mobila_im_models_Person_birthdate" object="${person}" z="qpjHzva9WDxtu6YLrvhGDYouTGA="/>
+    </page:show>
+</div>

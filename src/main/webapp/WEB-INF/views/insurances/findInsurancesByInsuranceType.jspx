@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByInsuranceType" id="ff_be_mobila_im_models_Insurance" path="/insurances" z="4nY9o6ohJjhNnJu+dFbMP3VCO8Y=">
+        <field:select disableFormBinding="true" field="InsuranceType" id="f_be_mobila_im_models_Insurance_InsuranceType" items="${insurancetypes}" path="/insurancetypes" z="h8y1vbjxgjXTx0RvxdhLgqY/k9M="/>
+    </form:find>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_Person" items="${people}" z="mXnpDS3yoT2PWhCkSRXcmIY1gos=">
+        <table:table data="${people}" id="l_be_mobila_im_models_Person" path="/people" z="mQaxcPnYDFP51N96nQvlMLZHPRw=">
+            <table:column id="c_be_mobila_im_models_Person_name" property="name" z="oLMWYW/Y85hfytdjRZM61GpG6vk="/>
+            <table:column id="c_be_mobila_im_models_Person_firstname" property="firstname" z="rIJi3NsV0j2DeODv2jZQjwpoPpI="/>
+            <table:column id="c_be_mobila_im_models_Person_address" property="address" z="6AxPgri3eBUeUd9LmI/aJUxt+ko="/>
+            <table:column id="c_be_mobila_im_models_Person_postalcode" property="postalcode" z="wHOMYZmmiqdAIMSOtmdTWsof2io="/>
+            <table:column id="c_be_mobila_im_models_Person_city" property="city" z="cx4XOJckIbB1K7kegiAeVKdYk3A="/>
+            <table:column id="c_be_mobila_im_models_Person_country" property="country" z="nNtyofnynHxbNiW+kZufFQEQnbY="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_Response" object="${response}" path="/responses" z="U05cCnqIONosQdBkVv6QFaPkiyo=">
+        <field:display date="true" dateTimePattern="${response_responsedate_date_format}" field="responseDate" id="s_be_mobila_im_models_Response_responseDate" object="${response}" z="kBGmodDQ6qRjxQueZ2qJlLlkegM="/>
+        <field:display field="responseMode" id="s_be_mobila_im_models_Response_responseMode" object="${response}" z="XlwzHRptnCGTkPW1ZJ86X1tcSyc="/>
+        <field:display field="imRequest" id="s_be_mobila_im_models_Response_imRequest" object="${response}" z="lkONKGo8YeXHBvotZenltpd4zDI="/>
+        <field:display field="status" id="s_be_mobila_im_models_Response_status" object="${response}" z="SrziutBh1JK5ZCPvzksIufXY078="/>
+        <field:display field="imresult" id="s_be_mobila_im_models_Response_imresult" object="${response}" z="sUPldeu7Wh/nK1nbDDHA68rah08="/>
+        <field:display field="valueId" id="s_be_mobila_im_models_Response_valueId" object="${response}" />
+        <field:display field="address" id="s_be_mobila_im_models_Response_address" object="${response}" z="4VPw+mmMUBLyok3jL0ahq5CaQh0="/>
+    </page:show>
+</div>

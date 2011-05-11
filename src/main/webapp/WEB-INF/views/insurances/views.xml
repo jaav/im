@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="insurances/list">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/list.jspx"/>
+    </definition>
+<definition extends="default" name="insurances/show">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/show.jspx"/>
+    </definition>
+<definition extends="default" name="insurances/create">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/create.jspx"/>
+    </definition>
+<definition extends="default" name="insurances/update">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/update.jspx"/>
+    </definition>
+<definition extends="default" name="insurances/findInsurancesByInsuranceType">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/findInsurancesByInsuranceType.jspx"/>
+    </definition>
+<definition extends="default" name="insurances/findInsurancesByImportFile">
+        <put-attribute name="body" value="/WEB-INF/views/insurances/findInsurancesByImportFile.jspx"/>
+    </definition>
+</tiles-definitions>

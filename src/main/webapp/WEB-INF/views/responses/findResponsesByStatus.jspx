@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByStatus" id="ff_be_mobila_im_models_Response" path="/responses" z="qtFd6IAzXy92B/j2Kd7nJxiOGLg=">
+        <field:select disableFormBinding="true" field="status" id="f_be_mobila_im_models_Response_status" items="${statuses}" path="/statuses" z="kA9UfAIPiSDqIskM3YqqprvaqiM="/>
+    </form:find>
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_be_mobila_im_models_Person" modelAttribute="person" path="/people" z="Z2PtA2uAMk0l86zMc9auRFSUHqg=">
+        <field:input field="name" id="c_be_mobila_im_models_Person_name" z="CL9R5bEnU7F7ipptgiNolksWH5Q="/>
+        <field:input field="firstname" id="c_be_mobila_im_models_Person_firstname" z="wMTf3pmgpCVhjwOLrWty1XsdV7w="/>
+        <field:input field="address" id="c_be_mobila_im_models_Person_address" z="PRK7eayQg61OT1vILf/0UkRHbxU="/>
+        <field:input field="postalcode" id="c_be_mobila_im_models_Person_postalcode" z="tf6r7/j4U5nwqk0Ig0PHEEPTB/o="/>
+        <field:input field="city" id="c_be_mobila_im_models_Person_city" z="C3IPZvUxPrCOxfIbl1VpJ4Bfi50="/>
+        <field:input field="country" id="c_be_mobila_im_models_Person_country" z="95/o40uLKMDVvQG7Bk8Hkn2dE3c="/>
+        <field:input field="nationality" id="c_be_mobila_im_models_Person_nationality" z="Lza0sRWhO2mgKTlqnR9GHXfg3uA="/>
+        <field:input field="gender" id="c_be_mobila_im_models_Person_gender" z="R2Z7vE5MK5yJQrsPnvDVXmxpTL4="/>
+        <field:input field="placeofbirth" id="c_be_mobila_im_models_Person_placeofbirth" z="BxOAb05D/peiiLfWFWA9BRhvJIk="/>
+        <field:input field="phone1" id="c_be_mobila_im_models_Person_phone1" z="Ah8upBTOpTmnBLRwogyOguoJLcI="/>
+        <field:input field="phone2" id="c_be_mobila_im_models_Person_phone2" z="kbcHx1MngdVpTBRZkPjrpoTedyM="/>
+        <field:input field="mail" id="c_be_mobila_im_models_Person_mail" z="IDsmNBSS0UJuMpZDQJ062cudLDU="/>
+        <field:input field="fax" id="c_be_mobila_im_models_Person_fax" z="Fah96n7MjAbLDrfsFtd2YnwCyQA="/>
+    <field:datetime dateTimePattern="${person_birthdate_date_format}" field="birthdate" id="c_be_mobila_im_models_Person_birthdate" z="99NMd4MIBF2dK3M9H/xralhRqng="/>
+    </form:update>
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByIdentifierEquals" id="ff_be_mobila_im_models_ImUser" path="/imusers" z="VO375AV5G9/D7VQ0V1Qaq4klcc4=">
+        <field:input disableFormBinding="true" field="identifier" id="f_be_mobila_im_models_ImUser_identifier" z="cVoAsWsq0kJ5ccXsg5xMoOsl2/4="/>
+    </form:find>
+</div>

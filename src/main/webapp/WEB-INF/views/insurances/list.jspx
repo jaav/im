@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_Insurance" items="${insurances}" z="WFA6g4yVr73jCKrGlsvRSt91Js4=">
+        <table:table data="${insurances}" id="l_be_mobila_im_models_Insurance" path="/insurances" z="/UsuESV/v0MjeH5SLCPvM7eKivE=">
+            <table:column id="c_be_mobila_im_models_Insurance_InsuranceType" property="insuranceType" z="KJis/DSoM/LODfpaQ6OkQWRWEFU="/>
+            <table:column id="c_be_mobila_im_models_Insurance_importFile" property="importFile" z="EztGq8sbIC3FjgsENNVFKB/WMPo="/>
+            <table:column id="c_be_mobila_im_models_Insurance_converter" property="converter" z="q26qWMICw7jW6KkQ0sE4BNWbhXA="/>
+            <table:column id="c_be_mobila_im_models_Insurance_abstractDataSaver" property="abstractDataSaver" z="e3F8z9tgDtQb4oCAGUjOfw4Fylo="/>
+            <table:column id="c_be_mobila_im_models_Insurance_pdfTemplate" property="pdfTemplate" z="a6fBnIK6Nn8XTqHH5g9pPB0IKFw="/>
+        </table:table>
+    </page:list>
+</div>

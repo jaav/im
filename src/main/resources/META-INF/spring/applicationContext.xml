@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd   http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+  <!--
+		This will automatically locate any and all property files you have
+		within your classpath, provided they fall under the META-INF/spring
+		directory. The located property files are parsed and their values can
+		then be used within application context files in the form of
+		${propertyKey}.
+	-->
+  <context:property-placeholder location="classpath*:META-INF/spring/*.properties"/>
+  <!--
+		Turn on AspectJ @Configurable support. As a result, any time you
+		instantiate an object, Spring will attempt to perform dependency
+		injection on that object. This occurs for instantiation via the "new"
+		keyword, as well as via reflection. This is possible because AspectJ
+		is used to "weave" Roo-based applications at compile time. In effect
+		this feature allows dependency injection of any object at all in your
+		system, which is a very useful feature (without @Configurable you'd
+		only be able to dependency inject objects acquired from Spring or
+		subsequently presented to a specific Spring dependency injection
+		method). Roo applications use this useful feature in a number of
+		areas, such as @PersistenceContext injection into entities.
+	-->
+  <context:spring-configured/>
+  <!--
+		This declaration will cause Spring to locate every @Component,
+		@Repository and @Service in your application. In practical terms this
+		allows you to write a POJO and then simply annotate the new POJO as an
+		@Service and Spring will automatically detect, instantiate and
+		dependency inject your service at startup time. Importantly, you can
+		then also have your new service injected into any other class that
+		requires it simply by declaring a field for your service inside the
+		relying class and Spring will inject it. Note that two exclude filters
+		are declared. The first ensures that Spring doesn't spend time
+		introspecting Roo-specific ITD aspects. The second ensures Roo doesn't
+		instantiate your @Controller classes, as these should be instantiated
+		by a web tier application context. Refer to web.xml for more details
+		about the web tier application context setup services.
+		
+		Furthermore, this turns on @Autowired, @PostConstruct etc support. These 
+		annotations allow you to use common Spring and Java Enterprise Edition 
+		annotations in your classes without needing to do any special configuration. 
+		The most commonly used annotation is @Autowired, which instructs Spring to
+		dependency inject an object into your class.
+	-->
+  <context:component-scan base-package="be.mobila.im">
+    <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
+    <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+  </context:component-scan>
+  <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
+    <property name="driverClassName" value="${database.driverClassName}"/>
+    <property name="url" value="${database.url}"/>
+    <property name="username" value="${database.username}"/>
+    <property name="password" value="${database.password}"/>
+    <property name="validationQuery" value="SELECT 1 FROM DUAL"/>
+    <property name="testOnBorrow" value="true"/>
+  </bean>
+  <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
+    <property name="entityManagerFactory" ref="entityManagerFactory"/>
+  </bean>
+  <tx:annotation-driven mode="aspectj" transaction-manager="transactionManager"/>
+  <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+    <property name="dataSource" ref="dataSource"/>
+  </bean>
+
+  <bean class="be.mobila.im.FolderResources" id="folderResources">
+    <property name="rootPath" value="${root}"/>
+    <property name="importFolderName" value="${import}"/>
+    <property name="dropFolderName" value="${drop}"/>
+    <property name="pdfStorageFolderName" value="${pdfStorage}"/>
+    <property name="xmlStorageFolderName" value="${xmlStorage}"/>
+    <property name="templatesFolderName" value="${templates}"/>
+  </bean>
+
+  <bean class="be.mobila.im.importers.AbstractConverter" id="abstractConverter" abstract="true">
+    <property name="folderResources" ref="folderResources"/>
+  </bean>
+
+  <bean class="be.mobila.im.importers.AbstractXMLStorageConverter" id="abstractXMLStorageConverter" abstract="true"
+        parent="abstractConverter"/>
+
+  <bean class="be.mobila.im.importers.AbstractDBStorageConverter" id="abstractDBStorageConverter" abstract="true"
+        parent="abstractConverter"/>
+
+  <bean class="be.mobila.im.importers.SampleExcelConverter" id="sampleExcelConverter"
+        parent="abstractXMLStorageConverter"/>
+
+  <bean class="be.mobila.im.importers.SampleXmlConverter" id="sampleXmlConverter" parent="abstractXMLStorageConverter"/>
+
+  <bean class="be.mobila.im.importers.LiaConverter" id="liaConverter" parent="abstractDBStorageConverter"/>
+
+  <bean class="be.mobila.im.importers.Importer" id="importer">
+    <property name="converters">
+      <map>
+        <entry key="liaConverter" value-ref="liaConverter"/>
+        <entry key="sampleExcelConverter" value-ref="sampleExcelConverter"/>
+        <entry key="sampleXmlConverter" value-ref="sampleXmlConverter"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="springMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="${company.mail.smtp}"/>
+  </bean>
+
+  <bean id="mailProps" class="be.mobila.im.flow.communicate.receivers.MailProps">
+    <property name="host" value="${company.mail.inbox.host}"/>
+    <property name="username" value="${company.mail.inbox.account.username}"/>
+    <property name="password" value="${company.mail.inbox.account.password}"/>
+    <property name="fromName" value="${company.mail.from.name}"/>
+    <property name="fromAddress" value="${company.mail.from.address}"/>
+    <property name="protocol" value="${company.mail.inbox.protocol}"/>
+  </bean>
+
+  <bean id="liaPdfCreator" class="be.mobila.im.flow.utils.LiaPdfCreator" parent="abstractPdfCreator"/>
+
+  <bean id="abstractPdfCreator" class="be.mobila.im.flow.utils.PdfCreator" abstract="true">
+    <property name="folderResources" ref="folderResources"/>
+  </bean>
+
+  <bean id="abstractSender" class="be.mobila.im.flow.communicate.senders.AbstractSender" abstract="true">
+    <property name="pdfCreators">
+      <map>
+        <entry key="LIFE" value-ref="liaPdfCreator"/>
+      </map>
+    </property>
+    <property name="folderResources" ref="folderResources"/>
+  </bean>
+
+  <bean id="mailSender" class="be.mobila.im.flow.communicate.senders.MailSender" parent="abstractSender">
+    <property name="springMailSender" ref="springMailSender"/>
+    <property name="fromName" value="${company.mail.from.name}"/>
+    <property name="fromAddress" value="${company.mail.from.address}"/>
+  </bean>
+
+  <bean id="senderFactory" class="be.mobila.im.flow.communicate.senders.SenderFactory">
+    <property name="senders">
+      <map>
+        <entry key="MAIL_WA" value-ref="mailSender"/>
+        <entry key="BB_MAIL" value-ref="mailSender"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="abstractDataSaver" class="be.mobila.im.flow.communicate.receivers.AbstractDataSaver" abstract="true">
+    <property name="folderResources" ref="folderResources"/>
+  </bean>
+
+  <bean id="liaDataSaver" class="be.mobila.im.flow.communicate.receivers.LiaDataSaver" parent="abstractDataSaver"/>
+
+  <bean id="abstractReceiver" class="be.mobila.im.flow.communicate.receivers.AbstractReceiver" abstract="true">
+    <property name="dataSavers">
+      <map>
+        <entry key="liaDataSaver" value-ref="liaDataSaver"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="mailReceiver" class="be.mobila.im.flow.communicate.receivers.MailReceiver" parent="abstractReceiver">
+    <property name="mailProps" ref="mailProps"/>
+  </bean>
+
+  <bean id="fileSystemReceiver" class="be.mobila.im.flow.communicate.receivers.FileSystemReceiver"
+        parent="abstractReceiver">
+    <property name="folderResources" ref="folderResources"/>
+  </bean>
+
+  <bean id="receiverFactory" class="be.mobila.im.flow.communicate.receivers.ReceiverFactory">
+    <property name="receivers">
+      <map>
+        <entry key="mailReceiver" value-ref="mailReceiver"/>
+        <entry key="fileSystemReceiver" value-ref="fileSystemReceiver"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="rootFactory" class="be.mobila.im.RootFactory">
+    <property name="receiverFactory" ref="receiverFactory"/>
+    <property name="senderFactory" ref="senderFactory"/>
+  </bean>
+
+  <task:scheduled-tasks scheduler="imScheduler">
+    <task:scheduled ref="rootFactory" method="start" fixed-rate="30000"/>
+    <task:scheduled ref="importer" method="convert" fixed-rate="120000"/>
+  </task:scheduled-tasks>
+
+  <task:scheduler id="imScheduler" pool-size="10"/>
+
+  <bean id="dbFiller" class="be.mobila.im.utils.DBFiller"/>
+</beans>

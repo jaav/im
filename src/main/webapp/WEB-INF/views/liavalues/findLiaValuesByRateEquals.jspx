@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByRateEquals" id="ff_be_mobila_im_models_LiaValue" path="/liavalues" z="5YJbO0I2vXIurgaRuHAOGg9/nz8=">
+        <field:input disableFormBinding="true" field="rate" id="f_be_mobila_im_models_LiaValue_rate" validationMessageCode="field_invalid_number" z="qmOuqhMFKto0EYFcC1LLokKMIw0="/>
+    </form:find>
+</div>

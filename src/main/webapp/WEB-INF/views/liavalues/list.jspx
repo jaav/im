@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_LiaValue" items="${liavalues}" z="Oy4KqJ5TAckNRtsgUCSC8cEVllM=">
+        <table:table data="${liavalues}" id="l_be_mobila_im_models_LiaValue" path="/liavalues" z="5TjakNfreuSZJeNOdt90Pr8/Ua8=">
+            <table:column id="c_be_mobila_im_models_LiaValue_proposal" property="proposal" z="D6k0sHqX+1gHrhZyEvh9AI3gXd0="/>
+            <table:column id="c_be_mobila_im_models_LiaValue_insurance" property="insurance" z="BA1xxfTHmha3rxxybQ9exFp+d3U="/>
+            <table:column id="c_be_mobila_im_models_LiaValue_amount" property="amount" z="KMDe6EuO3KtNLDeZxpfg/G+4H24="/>
+            <table:column id="c_be_mobila_im_models_LiaValue_rate" property="rate" z="oXydjXV6vPGithairnrp/1A4hZk="/>
+            <table:column id="c_be_mobila_im_models_LiaValue_insuranceSubType" property="insuranceSubType" z="7d7V2kh+rkydR0WeakuZO1QZi1Y="/>
+        </table:table>
+    </page:list>
+</div>

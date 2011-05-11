@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_mobila_im_models_Response" items="${responses}" z="J7fRZ64+Jfv0BhxpJLNeZ6RmKBM=">
+        <table:table data="${responses}" id="l_be_mobila_im_models_Response" path="/responses" z="NkzZJKZgeuPbciIUFhJYGc5Ct48=">
+            <table:column id="c_be_mobila_im_models_Response_responseDate" property="responseDate" z="S8K97vM9p6iTOfNGfxw/bA8SwTk="/>
+            <table:column id="c_be_mobila_im_models_Response_responseMode" property="responseMode" z="1Eod/Z2aLy+NWp9e8a/K3O/XYLc="/>
+            <table:column id="c_be_mobila_im_models_Response_imRequest" property="imRequest" z="GFD8+vdmtD2R8lHK74ctbiIqBvk="/>
+            <table:column id="c_be_mobila_im_models_Response_status" property="status" z="qVJas6FlM4gt3A5ZQ0NI9QaErBM="/>
+            <table:column id="c_be_mobila_im_models_Response_imresult" property="imresult" z="JqdUltdvmRZilrZDX5EvsHJ0I2c="/>
+            <table:column id="c_be_mobila_im_models_Response_valueId" property="valueId"/>
+            <table:column id="c_be_mobila_im_models_Response_address" property="address" z="AzPPg8/fVQfyZ6e6+8h2tOo5vks="/>
+        </table:table>
+    </page:list>
+</div>

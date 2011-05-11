@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_be_mobila_im_models_ImUser" modelAttribute="imUser" path="/imusers" z="PXpqeiWef8Erv3A283ulx9PVUl0=">
+        <field:input field="name" id="c_be_mobila_im_models_ImUser_name" z="qUiMp9EHix2QF0poZS1+HwV3ctw="/>
+        <field:input field="firstname" id="c_be_mobila_im_models_ImUser_firstname" z="mWjVfe+aA0koozLK6HuHRgj0wxk="/>
+        <field:input field="identifier" id="c_be_mobila_im_models_ImUser_identifier" z="5ZtuIGBOcGpNg66TGdn4iu0CUTs="/>
+    </form:update>
+</div>

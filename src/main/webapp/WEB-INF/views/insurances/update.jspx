@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_be_mobila_im_models_Insurance" modelAttribute="insurance" path="/insurances" z="NUwukJRSA9rIbFKoauGYucRJAsA=">
+        <field:select field="InsuranceType" id="c_be_mobila_im_models_Insurance_InsuranceType" items="${insurancetypes}" path="insurancetypes" z="kXwEI08Lmyw1Me1MzXvCAV7IBNc="/>
+        <field:input field="importFile" id="c_be_mobila_im_models_Insurance_importFile" z="Oq2aLUQF5XuM9dRCCrlVUmyxHws="/>
+        <field:input field="converter" id="c_be_mobila_im_models_Insurance_converter" z="bvrjDkae4eLq2muj2Ird7aa62l8="/>
+        <field:input field="abstractDataSaver" id="c_be_mobila_im_models_Insurance_abstractDataSaver" z="yRs6T3vd6nBhK9kOjvjbnVscaZc="/>
+        <field:input field="pdfTemplate" id="c_be_mobila_im_models_Insurance_pdfTemplate" z="8cZqAGBoQha+GIaL87vSHWzESBk="/>
+    </form:update>
+</div>

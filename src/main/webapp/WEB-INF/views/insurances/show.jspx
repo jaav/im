@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_mobila_im_models_Insurance" object="${insurance}" path="/insurances" z="YWmH8+VewZp46ogJ2ocYGIZprWU=">
+        <field:display field="insuranceType" id="s_be_mobila_im_models_Insurance_InsuranceType" object="${insurance}" z="azcRty//VOCrAKnig2Ikfn/H/7c="/>
+        <field:display field="importFile" id="s_be_mobila_im_models_Insurance_importFile" object="${insurance}" z="9cI2kKQBdFFIq//Rx4wpt6I9SOM="/>
+        <field:display field="converter" id="s_be_mobila_im_models_Insurance_converter" object="${insurance}" z="aj4l7shLL9f80Q7OMxrSgIwe0r8="/>
+        <field:display field="abstractDataSaver" id="s_be_mobila_im_models_Insurance_abstractDataSaver" object="${insurance}" z="e4kaBhuCmWbH0m1NUcgury3UCtk="/>
+        <field:display field="pdfTemplate" id="s_be_mobila_im_models_Insurance_pdfTemplate" object="${insurance}" z="I2JyvknS+wzQW2lOQSfqWEyMo6E="/>
+    </page:show>
+</div>
